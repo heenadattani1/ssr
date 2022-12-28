@@ -1,5 +1,5 @@
 <div *ngIf="loadingGlobal">
-  <div class="loading-template"><img src="assets/images/loading.gif" /></div>
+  <div class="loading-template"><img ngSrc="assets/images/loading.gif" /></div>
 </div>
 <div class="event-detail" *ngIf="!loadingGlobal">
   <div class="tab-options" *ngIf="overviewData">
@@ -73,19 +73,19 @@
       [pricingStages]="pricingStages"
     ></app-event-detail-overview>
 
-    <app-event-detail-registration
+   <!--  <app-event-detail-registration
       [hidden]="show.activeTab !== 'registration'"
       [registrationData]="overviewData"
-    ></app-event-detail-registration>
+    ></app-event-detail-registration> -->
 
-    <app-event-detail-course *ngIf="show.activeTab === 'course'"></app-event-detail-course>
+  <!--   <app-event-detail-course *ngIf="show.activeTab === 'course'"></app-event-detail-course> -->
 
-    <app-event-detail-dates-and-updates
+   <!--  <app-event-detail-dates-and-updates
       [hidden]="show.activeTab !== 'datesnupdates'"
       [dateAndUpdateData]="overviewData"
-    ></app-event-detail-dates-and-updates>
+    ></app-event-detail-dates-and-updates> -->
 
-    <app-event-detail-get-ready [hidden]="show.activeTab !== 'getready'" [getReadyData]="overviewData"></app-event-detail-get-ready>
+ <!--    <app-event-detail-get-ready [hidden]="show.activeTab !== 'getready'" [getReadyData]="overviewData"></app-event-detail-get-ready>
 
     <app-event-detail-charities
       [hidden]="show.activeTab !== 'charities'"
@@ -95,7 +95,7 @@
     <app-event-detail-results-photos
       [hidden]="show.activeTab !== 'resultsphotos'"
       [resultPhotosData]="overviewData"
-    ></app-event-detail-results-photos>
+    ></app-event-detail-results-photos> -->
   </div>
 </div>
 <!-- 

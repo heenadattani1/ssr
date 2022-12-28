@@ -121,17 +121,18 @@ export class MapBoxService {
 
       if (i === 0) {
         const startEl = el;
-        startEl.style.backgroundImage = 'url(/assets/images/event-detail/course/start-flag.png)';
+        //startEl.style.backgroundImage = 'url(/assets/images/event-detail/course/start-flag.png)';
+        startEl.style.backgroundImage = 'url(/assets/images/event-detail/course/start-flag_webp.webp)';
         markers.push(new Marker(startEl).setLngLat([startPoint.lon * 1, startPoint.lat * 1]));
       }
       if (i === legs.length - 1) {
         const endEl = el;
-        endEl.style.backgroundImage = 'url(/assets/images/event-detail/course/finish-flag.png)';
+        endEl.style.backgroundImage = 'url(/assets/images/event-detail/course/finish-flag_webp.webp)';
         markers.push(new Marker(endEl).setLngLat([endPoint.lon * 1, endPoint.lat * 1]));
       }
       if (leg.ragnar_leg === true && !isLegSelected) {
         const bannerEl = el;
-        bannerEl.style.backgroundImage = 'url(/assets/images/event-detail/course/ragnar-leg-icon-new.png)';
+        bannerEl.style.backgroundImage = 'url(/assets/images/event-detail/course/ragnar-leg-icon-new_webp.webp)';
         markers.push(new Marker(bannerEl).setLngLat([startPoint.lon * 1, startPoint.lat * 1]));
       }
 

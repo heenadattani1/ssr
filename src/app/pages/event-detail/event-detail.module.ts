@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 
 import { EventDetailRoutingModule } from './event-detail-routing.module';
 import { RegistrationComponent } from './registration/registration.component';
@@ -44,11 +44,13 @@ import { OverviewComponent } from './overview/overview.component';
     NgDygraphsModule,
     NgbModule,
     NgbNavModule,
+    NgOptimizedImage,
     // GoogleChartsModule
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
-        useFactory: (http: HttpClient) => new TranslateHttpLoader(http, './assets/i18n/', '.json'),
+        useFactory: (http: HttpClient) =>
+          new TranslateHttpLoader(http, './assets/i18n/', '.json'),
         deps: [HttpClient],
       },
     }),
