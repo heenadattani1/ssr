@@ -11,7 +11,7 @@
     "serve:ssr": "node dist/ssr/main.js",
     "build:ssr": "ng build && ng run ssr:server",
     "postbuild": "npm run obfuscate",
-    "build_live": "ng build --aot && node postbuild.js"
+    "build_live": "ng build --configuration production --aot && node postbuild.js && node compress.js"
   },
   "private": true,
   "dependencies": {
@@ -31,6 +31,7 @@
     "@ngx-translate/http-loader": "^7.0.0",
     "bootstrap": "^5.2.3",
     "bowser": "^1.9.4",
+    "brotli": "^1.3.3",
     "calendar-link": "^2.4.0",
     "cookie-parser": "^1.4.6",
     "core-utils": "^0.0.4",
