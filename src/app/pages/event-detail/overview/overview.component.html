@@ -4,8 +4,8 @@
       <div [ngClass]="overviewData.name.toLowerCase().includes('porsche') ? 'porsche_event_location' : 'event_location'">
         <img
           alt="{{ overviewData.start_city }} {{ overviewData.end_city ? 'to ' + overviewData.end_city : '' }}"
-          class="img-responsive"
-          [src]="overviewData.files.logo_white"
+          class="img-responsive overview-logo-img" 
+          [src]="overviewData.files.logo_white" height="100" width="100"
         />
       </div>
       <div class="event_register">
@@ -209,11 +209,11 @@
           <img
             src="assets/images/event-detail/overview/follow-on-instagram.png"
             alt="follow-on-instagram"
-            class="img-responsive center-block"
+            class="img-responsive center-block" height="100" width="100"
           />
         </a>
         <a href="https://www.facebook.com/TheRagnarRelaySeries" class="logo_links" target="_blank">
-          <img src="assets/images/event-detail/overview/join-on-fb.png" alt="join-on-fb" class="img-responsive center-block" />
+          <img src="assets/images/event-detail/overview/join-on-fb.png" alt="join-on-fb" class="img-responsive center-block"  height="100" width="100"/>
         </a>
       </div>
     </div>

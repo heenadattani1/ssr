@@ -90,6 +90,7 @@ export class EventDetailComponent implements OnInit, OnDestroy {
       this.overviewData.regStatus = this.eventService.getStatus(this.overviewData);
       this.overviewData.regStatusLabel = this.eventService.getRegStatusLabel(this.overviewData.regStatus);
       this.pricingStages = this.overviewData.updatedPricing;
+      console.log(this.overviewData);
       if (this.overviewData.name.toLowerCase().includes('porsche')) {
         this.porscheScript = this.renderer2.createElement('script');
         this.porscheScript.text = `
