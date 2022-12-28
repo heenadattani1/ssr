@@ -11,7 +11,7 @@
     "serve:ssr": "node dist/ssr/main.js",
     "build:ssr": "ng build && ng run ssr:server",
     "postbuild": "npm run obfuscate",
-    "build_live": "ng build --aot && node postbuild.js"
+    "build_live": "ng build --configuration production --aot && node postbuild.js && node compress.js"
   },
   "private": true,
   "dependencies": {
