@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, ExtraOptions, PreloadAllModules } from '@angular/router';
 import { staticRoutes } from './@core/utils';
+import { EventDetailComponent } from './pages/event-detail/event-detail.component';
 
 const routes: Routes = [
 /*   {
@@ -11,6 +12,10 @@ const routes: Routes = [
     path: authRoutes.main,
     loadChildren: () => import('./auth/auth.module').then((m) => m.AuthModule),
   }, */
+  {
+    path:'',
+    component: EventDetailComponent
+  },
   {
     path: '',
     loadChildren: () => import('./pages/pages.module').then((m) => m.PagesModule),

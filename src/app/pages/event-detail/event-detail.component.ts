@@ -73,6 +73,8 @@ export class EventDetailComponent implements OnInit, OnDestroy {
   getRaceDataFromGql = () => {
     this.loadingGlobal = true;
     // tslint:disable-next-line: deprecation
+    // for default open
+     this.raceId = !this.raceId ? 'appalachians_wv' : this.raceId;
     this.ragnarCmsDataService.getRaceData(this.raceId, raceDataFields).subscribe((response: OverviewRaceData) => {
       this.metaTagsService.setGenricMetaTags({
         title: response.name + ' - Ragnar Relays',
