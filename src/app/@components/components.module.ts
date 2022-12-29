@@ -9,7 +9,7 @@ import { TranslateHttpLoader } from "@ngx-translate/http-loader";
 import { ImageCropperModule } from "ngx-image-cropper";
 import { SlickCarouselModule } from "ngx-slick-carousel";
 import { CoreModule } from "../@core/core.module";
-import { FooterComponent } from "./footer/footer.component";
+/* import { FooterComponent } from "./footer/footer.component"; */
 import { Footerv2Component } from "./footerv2/footerv2.component";
 import { FormControlComponent } from "./form-control/form-control.component";
 import { HeaderRacesComponent } from "./header-races/header-races.component";
@@ -43,7 +43,7 @@ const MODULES = [NgbModule, ImageCropperModule];
 const COMPONENTS = [
   HeaderComponent,
   PageNotFoundComponent,
-  FooterComponent,
+ // FooterComponent,
   Footerv2Component,
   VirtualUpSellModalComponent,
   MemberRunStatusComponent,
