@@ -22,6 +22,22 @@ export class OverviewComponent implements OnInit, AfterViewInit {
       pagePostType: 'eventDetailOverview',
       pagePostType2: 'single-page',
     }); */
+    // document.getElementsByTagName("th");
+    setTimeout(()=>{
+      const img1 = document.querySelectorAll('th > a > img')[0];
+      const img2 = document.querySelectorAll('th > a > img')[1];
+      img1.setAttribute('height', '100');
+      img1.setAttribute('width', '100');
+      img1.setAttribute('src', 'assets/images/overview/JDRFRacePageGraphic.webp');
+
+      img2.setAttribute('height', '100');
+      img2.setAttribute('width', '100');
+      img2.setAttribute('src', 'assets/images/overview/RacePageBlock_Gear2.webp');
+
+      // <img src="/src/assets/images/overview/JDRFRacePageGraphic.webp" alt="">
+      // <img src="/src/assets/images/overview/RacePageBlock_Gear2.webp" alt="">
+
+    },100);
     this.getRaceData();
   }
   addPageInitEvent(screen_name) {
