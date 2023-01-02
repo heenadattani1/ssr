@@ -4,21 +4,20 @@ import findIndex from 'lodash/findIndex';
 import get from 'lodash/get';
 import lodashFilter from 'lodash/filter';
 import { forkJoin } from 'rxjs';
-import { RCMSEventDataService } from '@core/data/rcms-services/rcms-event.service';
-import { RcmsEventDetail, ClassificationAndDivision, Glampings } from '@core/interfaces/rcms-event-details.interface';
-import { XMomentService, LocalStorageService, DataLayerService } from '@core/utils';
-import { TeamAndRunnerInformation, InvitedUser } from '@core/interfaces/rcms-team-runner-information.interface';
-import { ProfileRcmsDataService, RagnarCMSDataService } from '@core/data';
-import { UserInfo } from '@core/interfaces/auth.interface';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { DigitalCheckInComponent } from './dialog/digital-check-in/digital-check-in.component';
-import { teamcenterDataField } from '@core/graphql/graphql';
-import { TeamCenterInterface } from '@core/interfaces/team-center-data.interface';
 import { TranslateService } from '@ngx-translate/core';
-import { ToastService } from '@components/toast/toast.service';
 import * as $ from 'jquery';
-import { MyRunnerData } from '@core/interfaces/my-runner-data.interface';
 import { DOCUMENT } from '@angular/common';
+import { MyRunnerData } from 'src/app/@core/interfaces/my-runner-data.interface';
+import { ClassificationAndDivision, Glampings, RcmsEventDetail } from 'src/app/@core/interfaces/rcms-event-details.interface';
+import { ProfileRcmsDataService, RagnarCMSDataService, RCMSEventDataService } from 'src/app/@core/data';
+import { DataLayerService, LocalStorageService, XMomentService } from 'src/app/@core/utils';
+import { ToastService } from 'src/app/@components/toast/toast.service';
+import { InvitedUser, TeamAndRunnerInformation } from 'src/app/@core/interfaces/rcms-team-runner-information.interface';
+import { UserInfo } from 'src/app/@core/interfaces/auth.interface';
+import { teamcenterDataField } from 'src/app/@core/graphql/graphql';
+import { TeamCenterInterface } from 'src/app/@core/interfaces/team-center-data.interface';
 
 @Component({
   selector: 'app-team-center',

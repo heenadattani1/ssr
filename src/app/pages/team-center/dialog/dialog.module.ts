@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CoreModule } from '@core/core.module';
 import { FormsModule } from '@angular/forms';
 import { RunnerVolunteerInviteComponent } from './runner-volunteer-invite/runner-volunteer-invite.component';
 import { InvitationListComponent } from './invitation-list/invitation-list.component';
@@ -12,6 +11,7 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { HttpClient } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { RosterSubstritutionComponent } from './roster-substritution/roster-substritution.component';
+import { CoreModule } from 'src/app/@core/core.module';
 
 const COMPONENTS = [
   RunnerVolunteerInviteComponent,

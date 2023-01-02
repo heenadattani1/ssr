@@ -1,10 +1,11 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import findIndex from 'lodash/findIndex';
-import { RCMSEventDataService } from '@core/data';
-import { RunnerVolunteerDeleteComponentData } from '@core/interfaces/dialog.interface';
-import { InvitedUser } from '@core/interfaces/rcms-team-runner-information.interface';
+
 import { TranslateService } from '@ngx-translate/core';
+import { InvitedUser } from 'src/app/@core/interfaces/rcms-team-runner-information.interface';
+import { RCMSEventDataService } from 'src/app/@core/data';
+import { RunnerVolunteerDeleteComponentData } from 'src/app/@core/interfaces/dialog.interface';
 
 @Component({
   selector: 'app-runner-volunteer-delete',

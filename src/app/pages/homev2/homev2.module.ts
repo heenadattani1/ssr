@@ -6,7 +6,8 @@ import { Homev2Component } from './homev2.component';
 import { RaceSliderComponent } from './race-slider/race-slider.component';
 // import { TestimonialsComponent } from './../../@components/testimonals/testimonials.component';
 import { SafeHtmlPipe } from './race-slider/race-slider.component';
-import { ComponentsModule } from '@components/components.module';
+import { ComponentsModule } from 'src/app/@components/components.module';
+
 
 const COMPONENTS = [RaceSliderComponent];
 @NgModule({

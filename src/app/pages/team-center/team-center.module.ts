@@ -9,14 +9,14 @@ import { RaceUpdatesComponent } from './tabs/race-updates/race-updates.component
 import { CovidCheckInComponent } from './tabs/covid-check-in/covid-check-in.component';
 import { TeamCenterRoutingModule } from './team-center-routing.module';
 import { NgbModule, NgbNavModule } from '@ng-bootstrap/ng-bootstrap';
-import { CoreModule } from '@core/core.module';
 import { FormsModule } from '@angular/forms';
-import { ComponentsModule } from '@components/components.module';
 import { DialogModule } from './dialog/dialog.module';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { HttpClient } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { CheckInComponent } from './tabs/deprecated check-in/check-in.component';
+import { CoreModule } from 'src/app/@core/core.module';
+import { ComponentsModule } from 'src/app/@components/components.module';
 
 const COMPONENTS = [
   TeamCenterComponent,

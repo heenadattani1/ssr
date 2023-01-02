@@ -1,12 +1,13 @@
 import { Component, OnInit, Input, EventEmitter, Output } from '@angular/core';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import * as moment from 'moment-timezone';
-import { RCMSEventDataService, AuthorizeNetService } from '@core/data';
-import { ToastService } from '@components/toast/toast.service';
-import { TeamVolunteerFeesComponentData } from '@core/interfaces/dialog.interface';
 import { TranslateService } from '@ngx-translate/core';
-import { headerRoutes, DataLayerService } from '@core/utils';
-import { GlampingCoupon } from '@core/interfaces/rcms-event-details.interface';
+import { TeamVolunteerFeesComponentData } from 'src/app/@core/interfaces/dialog.interface';
+import { DataLayerService, headerRoutes } from 'src/app/@core/utils';
+import { GlampingCoupon } from 'src/app/@core/interfaces/rcms-event-details.interface';
+import { AuthorizeNetService, RCMSEventDataService } from 'src/app/@core/data';
+import { ToastService } from 'src/app/@components/toast/toast.service';
+
 
 @Component({
   selector: 'app-glummping-fees',

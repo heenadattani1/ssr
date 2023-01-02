@@ -2,17 +2,14 @@ import { Component, OnInit, Input, ViewEncapsulation } from '@angular/core';
 import cloneDeep from 'lodash/cloneDeep';
 import indexOf from 'lodash/indexOf';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
-import { RCMSEventDataService } from '@core/data';
-import { CopyToClipboardService, LocalStorageService, DataLayerService } from '@core/utils';
-import { UserInfo } from '@core/interfaces/auth.interface';
 import { environment } from '../../../../../environments/environment';
-import {
-  RunnerVolunteerInviteComponentData,
-  RunnerVolunteerInviteCaptainData,
-  RunnerVolunteerInviteData,
-} from '@core/interfaces/dialog.interface';
-import { InvitedUser } from '@core/interfaces/rcms-team-runner-information.interface';
+
 import { TranslateService } from '@ngx-translate/core';
+import { RunnerVolunteerInviteCaptainData, RunnerVolunteerInviteComponentData, RunnerVolunteerInviteData } from 'src/app/@core/interfaces/dialog.interface';
+import { UserInfo } from 'src/app/@core/interfaces/auth.interface';
+import { InvitedUser } from 'src/app/@core/interfaces/rcms-team-runner-information.interface';
+import { CopyToClipboardService, DataLayerService, LocalStorageService } from 'src/app/@core/utils';
+import { RCMSEventDataService } from 'src/app/@core/data';
 
 @Component({
   selector: 'app-runner-volunteer-invite',

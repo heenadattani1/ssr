@@ -1,7 +1,8 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { StaticPageService } from '@core/data';
-import { DataLayerService } from '@core/utils';
-import { BannersListNew, Testimonials } from '@core/interfaces/static-pages.interface';
+import { StaticPageService } from 'src/app/@core/data';
+import { BannersListNew, Testimonials } from 'src/app/@core/interfaces/static-pages.interface';
+import { DataLayerService } from 'src/app/@core/utils';
+
 // import { ViewEncapsulation } from '@angular/core';
 @Component({
   selector: 'app-homev2',

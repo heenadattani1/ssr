@@ -7,18 +7,17 @@ import { HowItWorksComponent } from './how-it-works/how-it-works.component';
 import { InfoComponent } from './info/info.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { ComponentsModule } from '@components/components.module';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { FormsModule } from '@angular/forms';
-import { CoreModule } from '@core/core.module';
-import { ThemeModule } from '@core/theme/theme.module';
-import { lightTheme, darkTheme } from '@core/theme/utils';
 import { PublicShareComponent } from './public-share/public-share.component';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { HttpClient } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { ChooseTeamComponent } from './choose-team/choose-team.component';
 import { DcDashboardComponent } from './dc-dashboard/dc-dashboard.component';
+import { ComponentsModule } from 'src/app/@components/components.module';
+import { CoreModule } from 'src/app/@core/core.module';
+import { darkTheme, lightTheme } from 'src/app/@core/theme/utils';
 
 const COMPONENTS = [
   HomeComponent,
