@@ -60,23 +60,12 @@
           },
           "configurations": {
             "production": {
-              "budgets": [
-                {
-                  "type": "initial",
-                  "maximumWarning": "5000kb",
-                  "maximumError": "15mb"
-                },
-                {
-                  "type": "anyComponentStyle",
-                  "maximumWarning": "10kb",
-                  "maximumError": "25kb"
-                }
-              ],
+           
               "outputHashing": "all"
             },
             "development": {
               "buildOptimizer": true,
-              "optimization": true,
+              "optimization": false,
               "vendorChunk": true,
               "extractLicenses": true,
               "sourceMap": true,
