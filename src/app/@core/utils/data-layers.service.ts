@@ -9,7 +9,7 @@ export class DataLayerService {
     FAILED: 'failed',
   };
   constructor(private localStorageService: LocalStorageService) {}
-  pageInitEvent(obj:any) {
+  pageInitEvent(obj) {
     // tslint:disable-next-line: no-string-literal
     window['dataLayer'].push({
       event: 'pageInit',
