@@ -27,8 +27,6 @@ import { AmbassadorFormComponent } from './ambassador/ambassador-form/ambassador
 import { TrainingRoadComponent } from './training-road/training-road.component';
 import { environment } from '../../../environments/environment';
 import { PlanYourTripComponent } from './plan-your-trip/plan-your-trip.component';
-// import { Homev2Component } from './homev2/homev2.component';
-// import { WelcomeComponent } from '../welcome/welcome.component';
 import { PartnersComponent } from './partners/partners.component';
 import { PartnerDetailsComponent } from './partners/partner-details/partner-details.component';
 import { StaticPageRoutes } from 'src/app/@core/utils';
@@ -37,17 +35,6 @@ const routes: Routes = [
     path: StaticPageRoutes.main,
     component: StaticPagesComponent,
     children: [
-      // {
-      //   path: StaticPageRoutes.main,
-      //   component: Homev2Component,
-      //   data: {
-      //     title: 'Ragnar Home | Find an Overnight Road or Trail Running Relay Near You!',
-      //     description:
-      //       'What is Ragnar? Long distance, team, overnight running relays races in scenic locations across the country. If you can run a 10k or a half marathon, you can run a Ragnar Relay! Register today.',
-      //     keywords:
-      //       'Ragnar, overnight relay race, half marathon, 10k, trail running, team relay, race calendar, run a race, find a race, long distance running',
-      //   },
-      // },
       {
         path: StaticPageRoutes.innovationLab,
         component: InnovationLabComponent,
@@ -148,17 +135,6 @@ const routes: Routes = [
           },
         },
       },
-      // {
-      //   path: StaticPageRoutes.roadPartners,
-      //   component: RoadPartnerComponent,
-      //   data: {
-      //     /* TODO: Remaning */ title: 'Road Partners',
-      //     description:
-      //       'What is Ragnar? Long distance, team, overnight running relays races in scenic locations across the country. If you can run a 10k or a half marathon, you can run a Ragnar Relay! Register today.',
-      //     keywords:
-      //       'Ragnar, overnight relay race, half marathon, 10k, trail running, team relay, race calendar, run a race, find a race, long distance running',
-      //   },
-      // },
       {
         path: StaticPageRoutes.safetyRoad,
         component: SafetyComponent,
@@ -205,17 +181,6 @@ const routes: Routes = [
           },
         },
       },
-      // {
-      //   path: StaticPageRoutes.trailPartners,
-      //   component: TrailPartnerComponent,
-      //   data: {
-      //     /* TODO: Remaning */ title: 'Trail Partners',
-      //     description:
-      //       'What is Ragnar? Long distance, team, overnight running relays races in scenic locations across the country. If you can run a 10k or a half marathon, you can run a Ragnar Relay! Register today.',
-      //     keywords:
-      //       'Ragnar, overnight relay race, half marathon, 10k, trail running, team relay, race calendar, run a race, find a race, long distance running',
-      //   },
-      // },
       {
         path: StaticPageRoutes.runnerRequiredVolunteer,
         component: VolunteerComponent,
@@ -392,16 +357,6 @@ const routes: Routes = [
           },
         },
       },
-      // {
-      //   path: StaticPageRoutes.welcome,
-      //   component: WelcomeComponent,
-      //   data: {
-      //     title: 'Welcome',
-      //     description: 'Welcome',
-      //     keywords:
-      //       'Ragnar, overnight relay race, half marathon, 10k, trail running, team relay, race calendar, run a race, find a race, long distance running',
-      //   },
-      // },
       {
         path: '',
         redirectTo: StaticPageRoutes.main,
