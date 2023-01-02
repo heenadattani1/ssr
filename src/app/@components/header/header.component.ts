@@ -72,7 +72,7 @@ export class HeaderComponent implements OnInit {
 
   declare dcStartDate: object;
   declare dcEndDate: object;
-
+  headerRacesLoad =false;
   constructor(
     private route: ActivatedRoute,
     private router: Router,
