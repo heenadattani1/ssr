@@ -22,7 +22,6 @@ export class OverviewComponent implements OnInit, AfterViewInit {
       pagePostType: 'eventDetailOverview',
       pagePostType2: 'single-page',
     }); */
-    // document.getElementsByTagName("th");
     setTimeout(()=>{
       const img1 = document.querySelectorAll('th > a > img')[0];
       const img2 = document.querySelectorAll('th > a > img')[1];
@@ -34,12 +33,10 @@ export class OverviewComponent implements OnInit, AfterViewInit {
       img2.setAttribute('width', '100');
       img2.setAttribute('src', 'assets/images/overview/RacePageBlock_Gear2-webp.webp');
 
-      // <img src="/src/assets/images/overview/JDRFRacePageGraphic.webp" alt="">
-      // <img src="/src/assets/images/overview/RacePageBlock_Gear2.webp" alt="">
-
     },100);
     this.getRaceData();
   }
+
   addPageInitEvent(screen_name) {
     const pagePostType = screen_name.replace(/(^|-)./g, (s) => s.slice(-1).toUpperCase());
     this.dataLayerService.pageInitEvent({
@@ -48,6 +45,7 @@ export class OverviewComponent implements OnInit, AfterViewInit {
       pagePostType2: 'single-page',
     });
   }
+  
   getRaceData() {
     if (this.overviewData) {
       if (this.overviewData.files.banner.split(' ').length > 1) {

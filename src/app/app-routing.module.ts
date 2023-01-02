@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule, ExtraOptions, PreloadAllModules } from '@angular/router';
 import { staticRoutes } from './@core/utils';
 import { EventDetailComponent } from './pages/event-detail/event-detail.component';
+// import { OverviewComponent } from './pages/event-detail/overview/overview.component';
 
 const routes: Routes = [
 /*   {
