@@ -3,6 +3,7 @@ import { StaticPageService } from 'src/app/@core/data';
 import { BannersListNew, Testimonials } from 'src/app/@core/interfaces/static-pages.interface';
 import { DataLayerService } from 'src/app/@core/utils';
 
+
 // import { ViewEncapsulation } from '@angular/core';
 @Component({
   selector: 'app-homev2',
