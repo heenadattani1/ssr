@@ -7,4 +7,22 @@ import { Component, Input } from '@angular/core';
 export class VideoModalComponent {
   @Input() videoLink;
   constructor() {}
+/*   ngOnInit(): void {
+    console.log("this.videoLink?.type",this.videoLink?.type); */
+    /**
+   * video tag script dynamic loading by heena
+   */
+   /*  if (this.videoLink?.type === 'video')
+      this.addVideoScriptTag();
+  }
+
+  
+  addVideoScriptTag() {
+    if (!document.getElementById('vimeo')) {
+      var script = document.createElement('script');
+      script.id = 'vimeo';
+      script.src = "https://player.vimeo.com/api/player.js";
+      document.body.appendChild(script);
+    }
+  } */
 }
