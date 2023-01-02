@@ -1,12 +1,12 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Team, UserRegistrationInfo } from '@core/interfaces/rcms-team-runner-information.interface';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { TeamVolunteerFeesComponent } from '@pages/team-center/dialog/team-volunteer-fees/team-volunteer-fees.component';
-import { RcmsEventDetail } from '@core/interfaces/rcms-event-details.interface';
 import cloneDeep from 'lodash/cloneDeep';
-import { RCMSEventDataService } from '@core/data';
-import { CopyToClipboardService } from '@core/utils';
-import { CheckInConfig } from '@core/interfaces/team-center.interface';
+import { RCMSEventDataService } from 'src/app/@core/data';
+import { RcmsEventDetail } from 'src/app/@core/interfaces/rcms-event-details.interface';
+import { Team, UserRegistrationInfo } from 'src/app/@core/interfaces/rcms-team-runner-information.interface';
+import { CheckInConfig } from 'src/app/@core/interfaces/team-center.interface';
+import { CopyToClipboardService } from 'src/app/@core/utils';
+import { TeamVolunteerFeesComponent } from '../../dialog/team-volunteer-fees/team-volunteer-fees.component';
 
 @Component({
   selector: 'app-team-center-check-in',

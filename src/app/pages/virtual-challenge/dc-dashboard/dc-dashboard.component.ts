@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { AddLatestActivityComponent } from '@components/virtual-challenge/add-latest-activity/add-latest-activity.component';
+/* import { AddLatestActivityComponent } from '@components/virtual-challenge/add-latest-activity/add-latest-activity.component';
 import { InviteModalComponent } from '@components/virtual-challenge/invite-modal/invite-modal.component';
 import {
   LocalStorageService,
@@ -23,13 +23,21 @@ import {
 import { BadgeAchievementModalComponent } from '@components/virtual-challenge/badge-achievement-modal/badge-achievement-modal.component';
 import { UserInfo } from '@core/interfaces/auth.interface';
 import { CommonModelDialogComponent } from '@components/virtual-challenge/common-model-dialog/common-model-dialog.component';
-import { FaqModalComponent } from '@components/virtual-challenge/faq-modal/faq-modal.component';
+import { FaqModalComponent } from '@components/virtual-challenge/faq-modal/faq-modal.component'; */
 import * as moment from 'moment-timezone';
 import * as $ from 'jquery';
 import { dashboardScreenMenu, show, screens } from './dc-dashboard-constants';
-import { StaticPageService } from '@core/data';
-import { Testimonials } from '@core/interfaces/testimonials.interface';
-import { ToastService } from '@components/toast/toast.service';
+import { authRoutes, badgeDays, localStorageConstant, LocalStorageService, MetaTagsService, virtualChallengeRoutes, VirtualChallengeSharedDataService, XMomentService } from 'src/app/@core/utils';
+import { Testimonials } from 'src/app/@core/interfaces/testimonials.interface';
+import { StaticPageService, VirtualChallengeCommunityService, VirtualChallengeDataService, VirtualChallengeMemberDataService, VirtualChallengeTeamDataService } from 'src/app/@core/data';
+import { ToastService } from 'src/app/@components/toast/toast.service';
+import { VirtualChallengeDetail, VirtualChallengeMember, VirtualChallengeTeam } from 'src/app/@core/interfaces/virtual-challenge.interface';
+import { UserInfo } from 'src/app/@core/interfaces/auth.interface';
+import { AddLatestActivityComponent } from 'src/app/@components/virtual-challenge/add-latest-activity/add-latest-activity.component';
+import { InviteModalComponent } from 'src/app/@components/virtual-challenge/invite-modal/invite-modal.component';
+import { FaqModalComponent } from 'src/app/@components/virtual-challenge/faq-modal/faq-modal.component';
+import { CommonModelDialogComponent } from 'src/app/@components/virtual-challenge/common-model-dialog/common-model-dialog.component';
+import { BadgeAchievementModalComponent } from 'src/app/@components/virtual-challenge/badge-achievement-modal/badge-achievement-modal.component';
 @Component({
   selector: 'app-dc-dashboard',
   templateUrl: './dc-dashboard.component.html',

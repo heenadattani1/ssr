@@ -1,12 +1,14 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Team, UserRegistrationInfo } from '@core/interfaces/rcms-team-runner-information.interface';
-import { RcmsEventDetail } from '@core/interfaces/rcms-event-details.interface';
+
 import lodashFilter from 'lodash/filter';
 import find from 'lodash/find';
 import sumBy from 'lodash/sumBy';
-import { RCMSEventDataService } from '@core/data';
-import { EventData, Legs } from '@core/interfaces/team-center.interface';
-import { DataLayerService } from '@core/utils';
+import { RCMSEventDataService } from 'src/app/@core/data';
+import { RcmsEventDetail } from 'src/app/@core/interfaces/rcms-event-details.interface';
+import { Team, UserRegistrationInfo } from 'src/app/@core/interfaces/rcms-team-runner-information.interface';
+import { EventData, Legs } from 'src/app/@core/interfaces/team-center.interface';
+import { DataLayerService } from 'src/app/@core/utils';
+
 
 @Component({
   selector: 'app-team-center-runner-assignments',

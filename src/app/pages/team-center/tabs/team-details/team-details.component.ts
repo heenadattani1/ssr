@@ -1,15 +1,15 @@
 import { Component, OnInit, Input, Output, EventEmitter, OnChanges } from '@angular/core';
-import { Team, UserRegistrationInfo } from '@core/interfaces/rcms-team-runner-information.interface';
-import { RCMSEventDataService } from '@core/data';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { TeamVolunteerFeesComponent } from '@pages/team-center/dialog/team-volunteer-fees/team-volunteer-fees.component';
-import { headerRoutes } from '@core/utils/routes-path.constant.service';
-import { Glampings, RcmsEventDetail } from '@core/interfaces/rcms-event-details.interface';
-import { EventData, TeamDetailsConfig } from '@core/interfaces/team-center.interface';
-import { MyRunnerData } from '@core/interfaces/my-runner-data.interface';
-import { GlummpingFeesComponent } from '@pages/team-center/dialog/glummping-fees/glummping-fees.component';
-import { XMomentService, DataLayerService } from '@core/utils';
+
 import * as moment from 'moment-timezone';
+import { RCMSEventDataService } from 'src/app/@core/data';
+import { MyRunnerData } from 'src/app/@core/interfaces/my-runner-data.interface';
+import { Glampings, RcmsEventDetail } from 'src/app/@core/interfaces/rcms-event-details.interface';
+import { Team, UserRegistrationInfo } from 'src/app/@core/interfaces/rcms-team-runner-information.interface';
+import { EventData, TeamDetailsConfig } from 'src/app/@core/interfaces/team-center.interface';
+import { DataLayerService, headerRoutes, XMomentService } from 'src/app/@core/utils';
+import { GlummpingFeesComponent } from '../../dialog/glummping-fees/glummping-fees.component';
+import { TeamVolunteerFeesComponent } from '../../dialog/team-volunteer-fees/team-volunteer-fees.component';
 // import { GlammpingFeesComponent } from '@pages/team-center/dialog/glummping-fees/glummping-fees.component';
 @Component({
   selector: 'app-team-center-team-details',

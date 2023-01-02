@@ -1,17 +1,17 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Team, UserRegistrationInfo } from '@core/interfaces/rcms-team-runner-information.interface';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { ClassificationAndDivision, RcmsEventDetail } from '@core/interfaces/rcms-event-details.interface';
-import { RCMSEventDataService } from '@core/data';
-import { EventData } from '@core/interfaces/team-center.interface';
-import { ToastService } from '@components/toast/toast.service';
-import { WaiverModalComponent } from '@components/virtual-challenge/waiver-modal/waiver-modal.component';
-import { RunnerVolunteerDeleteComponent } from '@pages/team-center/dialog/runner-volunteer-delete/runner-volunteer-delete.component';
-import { DataLayerService, MobileDetectionService } from '@core/utils';
 import { environment } from 'src/environments/environment';
-import { RosterSubstritutionComponent } from '@pages/team-center/dialog/roster-substritution/roster-substritution.component';
 import { DomSanitizer } from '@angular/platform-browser';
 import range from 'lodash/range';
+import { ClassificationAndDivision, RcmsEventDetail } from 'src/app/@core/interfaces/rcms-event-details.interface';
+import { Team, UserRegistrationInfo } from 'src/app/@core/interfaces/rcms-team-runner-information.interface';
+import { DataLayerService, MobileDetectionService } from 'src/app/@core/utils';
+import { RCMSEventDataService } from 'src/app/@core/data';
+import { ToastService } from 'src/app/@components/toast/toast.service';
+import { WaiverModalComponent } from 'src/app/@components/virtual-challenge/waiver-modal/waiver-modal.component';
+import { RunnerVolunteerDeleteComponent } from '../../dialog/runner-volunteer-delete/runner-volunteer-delete.component';
+import { RosterSubstritutionComponent } from '../../dialog/roster-substritution/roster-substritution.component';
+import { EventData } from 'src/app/@core/interfaces/team-center.interface';
 
 @Component({
   selector: 'app-team-center-covid-check-in',

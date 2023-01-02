@@ -1,29 +1,18 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { VirtualChallengeMemberDataService, VirtualChallengeDataService } from '@core/data/virtual-challenge/virtual-challenge.service';
-import { UserInfo } from '@core/interfaces/auth.interface';
-import {
-  LocalStorageService,
-  localStorageConstant,
-  virtualChallengeRoutes,
-  authRoutes,
-  MetaTagsService,
-  DefaultPaceService,
-  DataLayerService,
-} from '@core/utils';
 import { Router } from '@angular/router';
-import { VirtualChallengeDetail, UserChallengeInfo } from '@core/interfaces/virtual-challenge.interface';
 import * as moment from 'moment-timezone';
 import lodashCloneDeep from 'lodash/cloneDeep';
 import lodashSplit from 'lodash/split';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { AuthDataService } from '@core/data/authentication/auth.service';
-import { ToastService } from '@components/toast/toast.service';
 import * as $ from 'jquery';
-import { shirtSizes, profileShirtSizes } from '@core/utils';
-import { ImageCropComponent } from '@components/image-crop/image-crop.component';
-import { RCMSEventDataService } from '@core/data';
 import { UntypedFormGroup, FormGroupDirective } from '@angular/forms';
 import { keys } from 'lodash-es';
+import { UserChallengeInfo, VirtualChallengeDetail } from 'src/app/@core/interfaces/virtual-challenge.interface';
+import { UserInfo } from 'src/app/@core/interfaces/auth.interface';
+import { authRoutes, DataLayerService, DefaultPaceService, localStorageConstant, LocalStorageService, MetaTagsService, profileShirtSizes, shirtSizes, virtualChallengeRoutes } from 'src/app/@core/utils';
+import { AuthDataService, RCMSEventDataService, VirtualChallengeDataService, VirtualChallengeMemberDataService } from 'src/app/@core/data';
+import { ToastService } from 'src/app/@components/toast/toast.service';
+import { ImageCropComponent } from 'src/app/@components/image-crop/image-crop.component';
 
 @Component({
   selector: 'app-user-profile',

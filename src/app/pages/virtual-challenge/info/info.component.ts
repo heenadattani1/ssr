@@ -1,29 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { VirtualChallengeDataService, VirtualChallengeTeamDataService, VirtualChallengeMemberDataService } from '@core/data';
-import {
-  virtualChallengeRoutes,
-  authRoutes,
-  registrationRoutes,
-  StaticPageRoutes,
-  staticRoutes,
-} from '@core/utils/routes-path.constant.service';
-import { VirtualChallengeDetail } from '@core/interfaces/virtual-challenge.interface';
-import {
-  LocalStorageService,
-  localStorageConstant,
-  MetaTagsService,
-  SessionStorageService,
-  sessionStorageConstant,
-  DataLayerService,
-  XMomentService,
-} from '@core/utils';
-import { UserInfo } from '@core/interfaces/auth.interface';
-import { ToastService } from '@components/toast/toast.service';
 import { DomSanitizer } from '@angular/platform-browser';
 import * as moment from 'moment-timezone';
-import { CommonModelDialogComponent } from '@components/virtual-challenge/common-model-dialog/common-model-dialog.component';
+import { authRoutes, DataLayerService, localStorageConstant, LocalStorageService, MetaTagsService, registrationRoutes, sessionStorageConstant, SessionStorageService, StaticPageRoutes, staticRoutes, virtualChallengeRoutes, XMomentService } from 'src/app/@core/utils';
+import { VirtualChallengeDetail } from 'src/app/@core/interfaces/virtual-challenge.interface';
+import { UserInfo } from 'src/app/@core/interfaces/auth.interface';
+import { VirtualChallengeDataService, VirtualChallengeMemberDataService, VirtualChallengeTeamDataService } from 'src/app/@core/data';
+import { ToastService } from 'src/app/@components/toast/toast.service';
+import { CommonModelDialogComponent } from 'src/app/@components/virtual-challenge/common-model-dialog/common-model-dialog.component';
+
 
 @Component({
   selector: 'app-info',
@@ -69,7 +55,7 @@ export class InfoComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.route.queryParams.subscribe((params) => {
+    this.route.queryParams.subscribe((params:any) => {
       this.params = params;
       if (params.challengeId) {
         this.challengeId = params.challengeId;

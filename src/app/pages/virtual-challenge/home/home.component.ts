@@ -1,13 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { virtualChallengeRoutes } from '@core/utils/routes-path.constant.service';
-import { VirtualChallengeDataService, VirtualChallengeInviteDataService } from '@core/data/virtual-challenge/virtual-challenge.service';
-import { CommonModelDialogComponent } from '@components/virtual-challenge/common-model-dialog/common-model-dialog.component';
-import { VIRTUAL_CHALLENGE_TYPE } from '@core/enums/virtual-challenge-type.enum';
-import { VirtualChallengeSharedDataService } from '@core/utils/virtual-challenge-shared-data.service';
-import { UserInfo } from '@core/interfaces/auth.interface';
-import { DataLayerService, LocalStorageService, XMomentService } from '@core/utils';
 import { ActivatedRoute, Router } from '@angular/router';
+import { DataLayerService, LocalStorageService, virtualChallengeRoutes, VirtualChallengeSharedDataService, XMomentService } from 'src/app/@core/utils';
+import { UserInfo } from 'src/app/@core/interfaces/auth.interface';
+import { VirtualChallengeDataService, VirtualChallengeInviteDataService } from 'src/app/@core/data';
+import { VIRTUAL_CHALLENGE_TYPE } from 'src/app/@core/enums/virtual-challenge-type.enum';
+import { CommonModelDialogComponent } from 'src/app/@components/virtual-challenge/common-model-dialog/common-model-dialog.component';
 
 @Component({
   selector: 'app-home',
@@ -72,7 +70,7 @@ export class HomeComponent implements OnInit {
     }, this.handleError);
     this.userData = this.localStorageService.getUser() || null;
 
-    this.route.queryParams.subscribe((params) => {
+    this.route.queryParams.subscribe((params:any) => {
       const isNewChallengeStart = params.isNewChallengeStart;
       if (isNewChallengeStart) {
         this.getAllActiveChallenge();
@@ -97,7 +95,7 @@ export class HomeComponent implements OnInit {
 
   checkUserChallenge() {
     this.loading = true;
-    this.route.queryParams.subscribe((data) => {
+    this.route.queryParams.subscribe((data:any) => {
       this.isNextClicked = data?.next ? true : false;
     });
     this.virtualChallengeDataService.getUserExistingChallenge(this.userData.id).subscribe(

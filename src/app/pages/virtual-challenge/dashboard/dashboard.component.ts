@@ -1,36 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import {
-  LocalStorageService,
-  virtualChallengeRoutes,
-  authRoutes,
-  localStorageConstant,
-  MetaTagsService,
-  DataLayerService,
-} from '@core/utils';
-import {
-  VirtualChallengeDataService,
-  VirtualChallengeTeamDataService,
-  VirtualChallengeMemberDataService,
-  VirtualChallengeUtilDataService,
-  VirtualChallengeNotificationService,
-} from '@core/data';
-import {
-  VirtualChallengeDetail,
-  VirtualChallengeTeam,
-  VirtualChallengeLeaderBoard,
-  VirtualChallengeRunLogs,
-  GetChallengeNotification,
-  VirtualChallengeMember,
-} from '@core/interfaces/virtual-challenge.interface';
-import { VirtualChallengeSharedDataService } from '@core/utils/virtual-challenge-shared-data.service';
-import { UserInfo } from '@core/interfaces/auth.interface';
+
 import { environment } from 'src/environments/environment';
 import * as moment from 'moment-timezone';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { CommonModelDialogComponent } from '@components/virtual-challenge/common-model-dialog/common-model-dialog.component';
-import { ToastService } from '@components/toast/toast.service';
 import cloneDeep from 'lodash/cloneDeep';
+import { GetChallengeNotification, VirtualChallengeDetail, VirtualChallengeLeaderBoard, VirtualChallengeMember, VirtualChallengeRunLogs, VirtualChallengeTeam } from 'src/app/@core/interfaces/virtual-challenge.interface';
+import { UserInfo } from 'src/app/@core/interfaces/auth.interface';
+import { authRoutes, DataLayerService, localStorageConstant, LocalStorageService, MetaTagsService, virtualChallengeRoutes, VirtualChallengeSharedDataService } from 'src/app/@core/utils';
+import { ToastService } from 'src/app/@components/toast/toast.service';
+import { VirtualChallengeDataService, VirtualChallengeMemberDataService, VirtualChallengeNotificationService, VirtualChallengeTeamDataService, VirtualChallengeUtilDataService } from 'src/app/@core/data';
+import { CommonModelDialogComponent } from 'src/app/@components/virtual-challenge/common-model-dialog/common-model-dialog.component';
 
 @Component({
   selector: 'app-dashboard',
@@ -172,7 +152,7 @@ export class DashboardComponent implements OnInit {
       }
     });
 
-    this.route.queryParams.subscribe((params) => {
+    this.route.queryParams.subscribe((params:any) => {
       if (params.code && params.scope) {
         this.connectToStravaUserProfile(params.code);
       }

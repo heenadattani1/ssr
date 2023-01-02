@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { StaticPageRoutes } from '@core/utils';
 import { AmbassadorComponent } from './ambassador/ambassador.component';
 import { DivisionClassificationComponent } from './division-classification/division-classification.component';
 import { GlampingComponent } from './glamping/glamping.component';
@@ -32,6 +31,7 @@ import { PlanYourTripComponent } from './plan-your-trip/plan-your-trip.component
 // import { WelcomeComponent } from '../welcome/welcome.component';
 import { PartnersComponent } from './partners/partners.component';
 import { PartnerDetailsComponent } from './partners/partner-details/partner-details.component';
+import { StaticPageRoutes } from 'src/app/@core/utils';
 const routes: Routes = [
   {
     path: StaticPageRoutes.main,

@@ -1,7 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import replace from 'lodash/replace';
-import { EventData } from '@core/interfaces/team-center.interface';
-import { DataLayerService } from '@core/utils';
+import { EventData } from 'src/app/@core/interfaces/team-center.interface';
+import { DataLayerService } from 'src/app/@core/utils';
+
 
 @Component({
   selector: 'app-team-center-race-updates',

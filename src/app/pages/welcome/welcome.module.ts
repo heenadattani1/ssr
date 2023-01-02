@@ -2,7 +2,7 @@ import { WelcomeRoutingModule } from './welcome-routing.module';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { WelcomeComponent } from './welcome.component';
-import { ComponentsModule } from '@components/components.module';
+import { ComponentsModule } from 'src/app/@components/components.module';
 
 const COMPONENTS = [WelcomeComponent];
 @NgModule({

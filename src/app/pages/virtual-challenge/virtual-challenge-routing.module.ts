@@ -1,6 +1,5 @@
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
-import { virtualChallengeRoutes } from '@core/utils/routes-path.constant.service';
 import { VirtualChallengeComponent } from './virtual-challenge.component';
 import { HomeComponent } from './home/home.component';
 import { HowItWorksComponent } from './how-it-works/how-it-works.component';
@@ -8,9 +7,10 @@ import { InfoComponent } from './info/info.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { PublicShareComponent } from './public-share/public-share.component';
-import { AuthenticationGuard } from '@core/guards/authentication.guard';
 import { ChooseTeamComponent } from './choose-team/choose-team.component';
 import { DcDashboardComponent } from './dc-dashboard/dc-dashboard.component';
+import { AuthenticationGuard } from 'src/app/@core/guards/authentication.guard';
+import { virtualChallengeRoutes } from 'src/app/@core/utils';
 
 const routes: Routes = [
   {

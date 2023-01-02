@@ -1,6 +1,6 @@
 import { DOCUMENT } from '@angular/common';
 import { Component, Inject, OnDestroy, OnInit, Renderer2 } from '@angular/core';
-import { DataLayerService } from '@core/utils';
+import { DataLayerService } from 'src/app/@core/utils';
 
 @Component({
   selector: 'app-welcome',

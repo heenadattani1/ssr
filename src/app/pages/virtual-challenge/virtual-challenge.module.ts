@@ -18,6 +18,7 @@ import { DcDashboardComponent } from './dc-dashboard/dc-dashboard.component';
 import { ComponentsModule } from 'src/app/@components/components.module';
 import { CoreModule } from 'src/app/@core/core.module';
 import { darkTheme, lightTheme } from 'src/app/@core/theme/utils';
+import { ThemeModule } from 'src/app/@core/theme/theme.module';
 
 const COMPONENTS = [
   HomeComponent,

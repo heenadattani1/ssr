@@ -2,27 +2,29 @@ import { Component, Inject, OnDestroy, OnInit, Renderer2 } from '@angular/core';
 import { environment } from '../../../environments/environment';
 // import * as mapboxgl from 'mapbox-gl';
 import { Map, NavigationControl, LngLatBounds, LngLat, Marker, Popup } from 'mapbox-gl';
-import { DataLayerService, EventService, MapBoxService, MobileDetectionService, RACE_CONFIG } from '@core/utils';
-import { RagnarCMSDataService } from '@core/data';
+
 import lodashCloneDeep from 'lodash/cloneDeep';
 import loadshMeanBy from 'lodash/meanBy';
 import lodashOrderBy from 'lodash/orderBy';
 import loadashFind from 'lodash/find';
 import loadashIsEmpty from 'lodash/isEmpty';
-import { DateFormatPipe } from '@core/pipes/date-format.pipe';
-import { UtilsService } from '@core/utils/utils.service';
-import { MapCustomPipe } from '@core/pipes/map-custom.pipe';
 import { ActivatedRoute, Router } from '@angular/router';
-import { eventDetailMapFields } from '@core/graphql/graphql';
+
 import { TranslateService } from '@ngx-translate/core';
-import { FetchRaceList } from '@core/interfaces/gql-data.interface';
-import { AppliedFilters } from '@core/interfaces/applied-filters.interface';
-import { OverviewRaceData } from '@core/interfaces/race-data.interface';
-import { EventData, MapEventsData } from '@core/interfaces/map-events.interface';
 import { DOCUMENT } from '@angular/common';
 
 import * as $ from 'jquery';
-import { TinySliderService } from '@core/utils/tiny-slider.service';
+import { EventData, MapEventsData } from 'src/app/@core/interfaces/map-events.interface';
+import { FetchRaceList } from 'src/app/@core/interfaces/gql-data.interface';
+import { DataLayerService, EventService, MapBoxService, MobileDetectionService, RACE_CONFIG } from 'src/app/@core/utils';
+import { AppliedFilters } from 'src/app/@core/interfaces/applied-filters.interface';
+import { OverviewRaceData } from 'src/app/@core/interfaces/race-data.interface';
+import { RagnarCMSDataService } from 'src/app/@core/data';
+import { DateFormatPipe, MapCustomPipe } from 'src/app/@core/pipes';
+import { UtilsService } from 'src/app/@core/utils/utils.service';
+import { TinySliderService } from 'src/app/@core/utils/tiny-slider.service';
+import { eventDetailMapFields } from 'src/app/@core/graphql/graphql';
+
 @Component({
   selector: 'app-map',
   templateUrl: './map.component.html',

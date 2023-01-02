@@ -1,14 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import * as moment from 'moment';
-import { VirtualChallengeDetail, VirtualChallengeLeaderBoard, VirtualChallengeTeam } from '@core/interfaces/virtual-challenge.interface';
-import { DataLayerService, MetaTagsService, virtualChallengeRoutes } from '@core/utils';
-import { VirtualChallengeDataService, VirtualChallengeMemberDataService, VirtualChallengeTeamDataService } from '@core/data';
-import { UserInfo } from '@core/interfaces/auth.interface';
+
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { CommonModelDialogComponent } from '@components/virtual-challenge/common-model-dialog/common-model-dialog.component';
 import { environment } from 'src/environments/environment';
-import { ToastService } from '@components/toast/toast.service';
+import { DataLayerService, MetaTagsService, virtualChallengeRoutes } from 'src/app/@core/utils';
+import { VirtualChallengeDetail, VirtualChallengeLeaderBoard, VirtualChallengeTeam } from 'src/app/@core/interfaces/virtual-challenge.interface';
+import { UserInfo } from 'src/app/@core/interfaces/auth.interface';
+import { ToastService } from 'src/app/@components/toast/toast.service';
+import { VirtualChallengeDataService, VirtualChallengeMemberDataService, VirtualChallengeTeamDataService } from 'src/app/@core/data';
+import { CommonModelDialogComponent } from 'src/app/@components/virtual-challenge/common-model-dialog/common-model-dialog.component';
+
 
 @Component({
   selector: 'app-public-share',
@@ -61,7 +63,7 @@ export class PublicShareComponent implements OnInit {
     });
     this.curruntURL = this.router.url;
 
-    this.route.params.subscribe((params) => {
+    this.route.params.subscribe((params:any) => {
       this.params = params;
       if (params.id) {
         this.getUserExistingChallenge(params.id);

@@ -2,15 +2,16 @@ import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 import range from 'lodash/range';
 import lodashFilter from 'lodash/filter';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { UserRegistrationInfo, Team, InvitedUser, TeamAndRunnerInformation } from '@core/interfaces/rcms-team-runner-information.interface';
-import { VolunteersConfig, CmsEvent } from '@core/interfaces/team-center.interface';
-import { RcmsEventDetail } from '@core/interfaces/rcms-event-details.interface';
-import { ToastService } from '@components/toast/toast.service';
-import { RCMSEventDataService } from '@core/data/rcms-services/rcms-event.service';
-import { RunnerVolunteerInviteComponent } from '@pages/team-center/dialog/runner-volunteer-invite/runner-volunteer-invite.component';
-import { RunnerVolunteerDeleteComponent } from '@pages/team-center/dialog/runner-volunteer-delete/runner-volunteer-delete.component';
-import { TeamVolunteerFeesComponent } from '@pages/team-center/dialog/team-volunteer-fees/team-volunteer-fees.component';
-import { DataLayerService } from '@core/utils';
+import { RcmsEventDetail } from 'src/app/@core/interfaces/rcms-event-details.interface';
+import { InvitedUser, Team, TeamAndRunnerInformation, UserRegistrationInfo } from 'src/app/@core/interfaces/rcms-team-runner-information.interface';
+import { CmsEvent, VolunteersConfig } from 'src/app/@core/interfaces/team-center.interface';
+import { ToastService } from 'src/app/@components/toast/toast.service';
+import { RCMSEventDataService } from 'src/app/@core/data';
+import { DataLayerService } from 'src/app/@core/utils';
+import { RunnerVolunteerInviteComponent } from '../../dialog/runner-volunteer-invite/runner-volunteer-invite.component';
+import { RunnerVolunteerDeleteComponent } from '../../dialog/runner-volunteer-delete/runner-volunteer-delete.component';
+import { TeamVolunteerFeesComponent } from '../../dialog/team-volunteer-fees/team-volunteer-fees.component';
+
 
 @Component({
   selector: 'app-team-center-volunteers',
@@ -131,7 +132,7 @@ export class VolunteersComponent {
         (result) => {
           if (result && result.reloadVolunteer) {
             result.reloadVolunteer = false;
-            this.reloadEvent.next();
+            this.reloadEvent.next('');
           }
           if (result && result.invitationInformation) {
             this.invitationInformation = result.invitationInformation;
@@ -159,7 +160,7 @@ export class VolunteersComponent {
     modalRef.result.then(
       (result) => {
         if (result && result.reloadEvent) {
-          this.reloadEvent.next();
+          this.reloadEvent.next('');
         }
         if (result && result.runnerVolunteerInformation) {
           this.volunteerInformation = result.runnerVolunteerInformation;
@@ -188,7 +189,7 @@ export class VolunteersComponent {
       (result) => {
         if (result && result.invitationInformation) {
           /* TODO: Update invitation array after delete */
-          this.reloadEvent.next();
+          this.reloadEvent.next('');
           this.invitationInformation = result.invitationInformation;
         }
       },

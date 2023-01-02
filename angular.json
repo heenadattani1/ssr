@@ -71,12 +71,12 @@
                   "maximumWarning": "10kb",
                   "maximumError": "25kb"
                 }
-              ]
+              ],
+              "outputHashing": "all"
             },
             "development": {
               "buildOptimizer": true,
               "optimization": true,
-              "outputHashing": "all",
               "vendorChunk": true,
               "extractLicenses": true,
               "sourceMap": true,

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { DataLayerService } from '@core/utils';
-import { virtualChallengeRoutes } from '@core/utils/routes-path.constant.service';
+import { DataLayerService, virtualChallengeRoutes } from 'src/app/@core/utils';
+
 
 @Component({
   selector: 'app-how-it-works',

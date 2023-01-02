@@ -1,7 +1,9 @@
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { PagesComponent } from './pages.component';
-import { eventDetailRoutes } from '../@core/utils';
+import { eventDetailRoutes, HomeV2Route, MapRoute, StaticPageRoutes, staticRoutes, TeamCenterRoutes, virtualChallengeRoutes } from '../@core/utils';
+import { AuthenticationGuard } from '../@core/guards/authentication.guard';
+import { PageNotFoundComponent } from '../@components/page-not-found/page-not-found.component';
 
 
 const routes: Routes = [
@@ -9,15 +11,15 @@ const routes: Routes = [
     path: '',
     component: PagesComponent,
     children: [
-    /*   {
+      {
         path: virtualChallengeRoutes.main,
         loadChildren: () => import('./virtual-challenge/virtual-challenge.module').then((m) => m.VirtualChallengeModule),
-      }, */
+      },
       {
         path: eventDetailRoutes.main,
         loadChildren: () => import('./event-detail/event-detail.module').then((m) => m.EventDetailModule),
       },
-   /*    {
+      {
         path: MapRoute.map,
         loadChildren: () => import('./map/map.module').then((m) => m.MapModule),
       },
@@ -37,28 +39,26 @@ const routes: Routes = [
       {
         path: StaticPageRoutes.welcome,
         loadChildren: () => import('./welcome/welcome.module').then((m) => m.WelcomeModule),
-      }, */
-     /*  {
+      },
+      {
         path: staticRoutes.pageNotFound,
         component: PageNotFoundComponent,
         data: {
-          title: 'Ragnar Not Found' ,
+          title: 'Ragnar Not Found' /* TODO: Remaning */,
           description: 'Not able to find the content you are looking for',
           keywords:
             'race calendar, running events, overnight relay race, find a race, run a race, 10k, half marathon, Ragnar Relay, Ragnar Trail',
         },
-      }, */
-     /*  {
+      },
+      {
         path: '',
         redirectTo: StaticPageRoutes.main,
         pathMatch: 'full',
-      }, */
-      { path: '', redirectTo: '/event-detail/trail/appalachians_wv#overview', pathMatch: 'full' },
-      { path: '**', redirectTo:'/event-detail/trail/appalachians_wv#overview'},
-      /* {
+      },
+      {
         path: '**',
         redirectTo: staticRoutes.pageNotFound,
-      }, */
+      },
     ],
   },
 ];

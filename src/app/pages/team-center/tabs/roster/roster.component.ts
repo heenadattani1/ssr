@@ -1,15 +1,16 @@
 import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
-import { Team, UserRegistrationInfo, InvitedUser } from '@core/interfaces/rcms-team-runner-information.interface';
-import { RCMSEventDataService } from '@core/data';
-import { ToastService } from '@components/toast/toast.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import lodashFilter from 'lodash/filter';
 import find from 'lodash/find';
-import { RunnerVolunteerDeleteComponent } from '@pages/team-center/dialog/runner-volunteer-delete/runner-volunteer-delete.component';
-import { RunnerVolunteerInviteComponent } from '@pages/team-center/dialog/runner-volunteer-invite/runner-volunteer-invite.component';
-import { RcmsEventDetail } from '@core/interfaces/rcms-event-details.interface';
-import { EventData, RosterConfig } from '@core/interfaces/team-center.interface';
-import { DataLayerService } from '@core/utils';
+import { ToastService } from 'src/app/@components/toast/toast.service';
+import { RCMSEventDataService } from 'src/app/@core/data';
+import { RcmsEventDetail } from 'src/app/@core/interfaces/rcms-event-details.interface';
+import { InvitedUser, Team, UserRegistrationInfo } from 'src/app/@core/interfaces/rcms-team-runner-information.interface';
+import { EventData, RosterConfig } from 'src/app/@core/interfaces/team-center.interface';
+import { DataLayerService } from 'src/app/@core/utils';
+import { RunnerVolunteerDeleteComponent } from '../../dialog/runner-volunteer-delete/runner-volunteer-delete.component';
+import { RunnerVolunteerInviteComponent } from '../../dialog/runner-volunteer-invite/runner-volunteer-invite.component';
+
 
 @Component({
   selector: 'app-team-center-roster',
@@ -80,7 +81,7 @@ export class RosterComponent {
         (result) => {
           if (result && result.reloadVolunteer) {
             result.reloadVolunteer = false;
-            this.reloadEvent.next();
+            this.reloadEvent.next('');
           }
           if (result && result.invitationInformation) {
             this.invitationInformation = result.invitationInformation;
@@ -112,7 +113,7 @@ export class RosterComponent {
     modalRef.result.then(
       (result) => {
         if (result && result.reloadEvent) {
-          this.reloadEvent.next();
+          this.reloadEvent.next('');
         }
         if (result && result.runnerVolunteerInformation) {
           this.runnerInformation = result.runnerVolunteerInformation;
@@ -158,7 +159,7 @@ export class RosterComponent {
       } */
         if (result && result.invitationInformation) {
           /* TODO: Update invitation array after delete */
-          this.reloadEvent.next();
+          this.reloadEvent.next('');
           this.invitationInformation = result.invitationInformation;
         }
       },
