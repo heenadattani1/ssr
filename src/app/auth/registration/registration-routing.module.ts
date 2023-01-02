@@ -1,10 +1,10 @@
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
-import { registrationRoutes } from '@core/utils';
 import { RegistrationComponent } from './registration.component';
 import { PersonalInfoComponent } from './personal-info/personal-info.component';
 import { SelectPlanComponent } from './select-plan/select-plan.component';
 import { PaymentComponent } from './payment/payment.component';
+import { registrationRoutes } from 'src/app/@core/utils';
 const routes: Routes = [
   {
     path: '',

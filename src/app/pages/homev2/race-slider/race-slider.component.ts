@@ -1,9 +1,9 @@
 import { Component, Input, OnInit, ViewChild } from '@angular/core';
-import { BannersListNew } from '@core/interfaces/static-pages.interface';
 import * as $ from 'jquery';
 import { SlickCarouselComponent } from 'ngx-slick-carousel';
 import { DomSanitizer } from '@angular/platform-browser';
 import { PipeTransform, Pipe } from '@angular/core';
+import { BannersListNew } from 'src/app/@core/interfaces/static-pages.interface';
 
 @Pipe({ name: 'safeHtml' })
 export class SafeHtmlPipe implements PipeTransform {

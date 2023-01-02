@@ -1,12 +1,12 @@
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
-import { authRoutes, registrationRoutes } from '@core/utils';
 import { AuthComponent } from './auth.component';
 import { LoginComponent } from './login/login.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
 import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
-import { AuthenticationGuard } from '@core/guards/authentication.guard';
+import { authRoutes, registrationRoutes } from '../@core/utils';
+import { AuthenticationGuard } from '../@core/guards/authentication.guard';
 
 const routes: Routes = [
   {
