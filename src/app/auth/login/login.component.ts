@@ -44,6 +44,7 @@ export class LoginComponent implements OnInit {
       this.router.navigate([`/`]);
     }
     this.redirectTo = this.localStorageService.get(localStorageConstant.redirectTo) || null;
+    console.log(this.redirectTo)
   }
 
   login(form) {
