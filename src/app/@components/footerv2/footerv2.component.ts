@@ -15,6 +15,8 @@ export class Footerv2Component implements OnInit {
   public isMainRouterVisible = false;
 
   ngOnInit(): void {
+    
+    console.log('calll ================> footer');
     this.year = new Date().getFullYear();
     this.translate.setDefaultLang('en');
 

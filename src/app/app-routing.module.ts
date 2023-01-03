@@ -1,8 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule,} from '@angular/router';
 import { authRoutes, staticRoutes } from './@core/utils';
+import { RoadComponent } from './pages/static-pages/what-is-ragnar/road/road.component';
 
 const routes: Routes = [
+
+  {
+    path: '',
+    component: RoadComponent
+  },
   {
     path: '',
     loadChildren: () => import('./pages/homev2/homev2.module').then((m) => m.Homev2Module),

@@ -12,7 +12,6 @@ export class HeaderRacesComponent implements OnInit {
   constructor(private dataLayerService: DataLayerService) {}
 
   ngOnInit(): void {
-    console.log('calll=================>')
     this.regionEvents = Array.isArray(this.regionEvents) ? this.regionEvents : [];
   }
   closeDropdown() {
