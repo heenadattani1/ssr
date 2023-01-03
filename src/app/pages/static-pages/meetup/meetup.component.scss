@@ -82,7 +82,7 @@
     padding: 30px 0px;
   }
   .meetup_calendar_banner {
-    background: url(/assets/images/static-pages/meetup-calendar/web_calendar_bannerImage.png) no-repeat;
+    background: url(/assets/images/static-pages/meetup-calendar/web_calendar_bannerImage_webp.webp) no-repeat;
     background-size: cover;
     background-position: top;
     height: 350px;
@@ -97,7 +97,7 @@
     #mc-date-filter {
       position: relative;
       input[type='text'] {
-        background-image: url(/assets/images/static-pages/meetup-calendar/web_calendar_calendarIconOrange.png);
+        background-image: url(/assets/images/static-pages/meetup-calendar/web_calendar_calendarIconOrange_webp.webp);
         background-position: 7px 8px;
         background-size: 14px auto;
       }
@@ -120,17 +120,17 @@
       background-repeat: no-repeat;
 
       &#location {
-        background-image: url(/assets/images/static-pages/meetup-calendar/web_calendar_locationIcon.png);
+        background-image: url(/assets/images/static-pages/meetup-calendar/web_calendar_locationIcon_webp.webp);
         background-position: 7px 10px;
         background-size: 11px auto;
       }
       &#race {
-        background-image: url(/assets/images/static-pages/meetup-calendar/relay-logo.png);
+        background-image: url(/assets/images/static-pages/meetup-calendar/relay-logo_webp.webp);
         background-position: 7px 9px;
         background-size: 15px auto;
       }
       &#date {
-        background-image: url(/assets/images/static-pages/meetup-calendar/web_calendar_calendarIconOrange.png);
+        background-image: url(/assets/images/static-pages/meetup-calendar/web_calendar_calendarIconOrange_webp.webp);
         background-position: 7px 8px;
         background-size: 14px auto;
       }
@@ -208,7 +208,7 @@
           .dropdown,
           .dropup {
             button {
-              background-image: url(/assets/images/static-pages/meetup-calendar/icon-calendar.png);
+              background-image: url(/assets/images/static-pages/meetup-calendar/icon-calendar_webp.webp);
               background-position: 13px center;
               background-repeat: no-repeat;
               border-color: silver;
@@ -268,7 +268,7 @@
             padding: 3px 0px 3px 42px;
             -webkit-appearance: none;
             -moz-appearance: none;
-            background-image: url(/assets/images/static-pages/meetup-calendar/icon-calendar.png);
+            background-image: url(/assets/images/static-pages/meetup-calendar/icon-calendar_webp.webp);
             background-repeat: no-repeat;
             background-position: 10px center;
             color: $black;
