@@ -83,7 +83,7 @@
           <div *ngIf="!selectedEvent.disableTeamNameEdit && isCaptain" class="col-md-8 col-xs-7 user-values edit-option">
             <label [hidden]="teamDetailConfig.editOption">{{ teamInformation.name }}</label>
             <a [hidden]="teamDetailConfig.editOption" (click)="toggleEditOption()">
-              <img src="assets/images/team-center/edit-icon.png" alt="Edit icon" class="img-responsive" />
+              <img src="assets/images/team-center/edit-icon_webp.webp" alt="Edit icon" class="img-responsive" />
             </a>
             <label [hidden]="!teamDetailConfig.editOption">
               <form #teamNameForm="ngForm">
@@ -382,7 +382,7 @@
   <div class="team-center-ads">
     <div class="ads">
       <div class="ads-inner">
-        <img class="img-responsive" src="assets/images/team-center/ads/running-essentials-new.jpg" />
+        <img class="img-responsive" src="assets/images/team-center/ads/running-essentials-new_webp.webp" />
         <div class="ads-desc">
           <div class="ads-main-title">{{ 'team-center.tabs.team-details.essential' | translate }}</div>
           <p class="ads-text">
@@ -406,7 +406,6 @@
       "
     >
       <div class="get-glamp-inner">
-        <!-- <img class="img-responsive" src="images/team-center/ads/glamping.jpg"/> -->
         <div class="glamp-graphic-wrapper">
           <div class="embed-responsive embed-responsive-16by9">
             <iframe
@@ -451,34 +450,5 @@
         </div>
       </div>
     </div>
-
-    <!-- <div class="ads">
-      <div class="ads-inner">
-        <img class="img-responsive" src="assets/images/team-center/ads/custom-gears-new.jpg" />
-        <div class="ads-desc">
-          <div class="ads-main-title">{{ 'team-center.tabs.team-details.custom-gear' | translate }}</div>
-          <p class="ads-text">{{ 'team-center.tabs.team-details.cover-more-miles' | translate }}</p>
-          <div class="text-center">
-            <a href="https://www.customink.com/ink/partners/ragnar-relay" target="_blank" class="btn btn-sherpa-blue">{{
-              'team-center.tabs.team-details.customize' | translate
-            }}</a>
-          </div>
-        </div>
-      </div>
-    </div> -->
-    <!-- <div class="ads">
-      <div class="ads-inner">
-        <img class="img-responsive" src="assets/images/team-center/ads/covid-19_thumb.png" />
-        <div class="ads-desc">
-          <div class="ads-main-title">{{ 'team-center.tabs.team-details.covid-19-protocols' | translate }}</div>
-          <p class="ads-text">{{ 'team-center.tabs.team-details.how-we-will-race-2021' | translate }}</p>
-          <div class="text-center">
-            <a href="https://run.ragnarrelay.com/covid_general/" target="_blank" class="btn btn-sherpa-blue">{{
-              'team-center.tabs.team-details.learn-more' | translate
-            }}</a>
-          </div>
-        </div>
-      </div>
-    </div> -->
   </div>
 </div>
