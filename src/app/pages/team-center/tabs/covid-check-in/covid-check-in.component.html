@@ -2,7 +2,7 @@
   <div class="event-city-logo" id="event-logo">
     <img src="{{ eventData.cmsEvent.files.logo }}" alt="{{ selectedEvent.name || 'Race Logo' }}" class="img-responsive center-block" />
     <a (click)="redirectToTeamDetails()" class="modal-close-btn" *ngIf="activeCaptainTab === 5 || activeRunnerTab === 4">
-      <img class="img-responsive center-block" src="assets/images/team-center/modal-close-icon.png" alt="Close Icon" />
+      <img class="img-responsive center-block" src="assets/images/team-center/modal-close-icon_webp.webp" alt="Close Icon" />
     </a>
   </div>
   <div class="form-content">
@@ -217,65 +217,6 @@
             </div>
           </div>
         </div>
-        <!-- <div class="step1-1" id="step1-1" *ngIf="activeRunnerTab === 2">
-          <div class="flow-holder">
-            <p class="error" *ngIf="(covid19VideoReCheck1 || covid19VideoReCheck2) && runnerConditions.covid19FormSubmitted">
-              Safety First! You need to agree to the questions below before continuing.
-            </p>
-            <p class="error" *ngIf="!selectedEvent.files.race_covid_safety_video">Race covid safety video not found</p>
-            <div class="iframe_cover" *ngIf="selectedEvent.files.race_covid_safety_video">
-              <iframe
-                [src]="selectedEvent.files.race_covid_safety_video | sanitizeUrl"
-                width="280"
-                height="240"
-                frameborder="0"
-                allow="autoplay; fullscreen; picture-in-picture"
-                allowfullscreen
-              ></iframe>
-            </div>
-            <div class="modal-wrap">
-              <a href="https://run.ragnarrelay.com/covid_general/" target="_blank">Ragnar's COVID-19 Mitigation Policy.</a>
-            </div>
-            <div class="form-check" (click)="runnerConditions.covid19FormSubmitted = true">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                value=""
-                [(ngModel)]="runnerConditions.covid19VideoCheck1"
-                required
-                id="covidPolicy1"
-                (change)="covid19safetyChecked1()"
-              />
-              <label class="form-check-label" for="covidPolicy1" (click)="covid19safetyChecked1()">
-                I agree to Ragnar's COVID-19 Mitigation Policy.
-              </label>
-            </div>
-            <div class="form-check" (click)="runnerConditions.covid19FormSubmitted = true">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                value=""
-                [(ngModel)]="runnerConditions.covid19VideoCheck2"
-                required
-                id="covidPolicy2"
-                (change)="covid19safetyChecked2()"
-              />
-              <label class="form-check-label" for="covidPolicy2" (click)="covid19safetyChecked2()">
-                I declare that i have had no known exposure to COVID-19 in the last 14 days and have not experienced any symptoms associated
-                with COVID-19 in the last 14 days.
-              </label>
-            </div>
-            <div class="btn-check-in-wrap">
-              <a class="btn btn-sherpa-blue" (click)="setActiveTab(1)">Previous</a>
-              <a
-                class="btn btn-sherpa-blue"
-                (click)="setActiveTab(3); populateFormChecks()"
-                [class.disabled]="!runnerConditions.covid19VideoCheck1 || !runnerConditions.covid19VideoCheck2"
-                >Next</a
-              >
-            </div>
-          </div>
-        </div> -->
         <div class="step2" id="step2" *ngIf="activeRunnerTab === 3">
           <div class="flow-holder">
             <p class="error" *ngIf="(raceWaiverRechecked || venueWaiverRechecked) && runnerConditions.waiverFormSubmitted">
@@ -336,7 +277,7 @@
           <div class="flow-holder">
             <p><em>Hecho. Gjort. Eriedigt. Done & dusted.</em></p>
             <p>No matter how you say it:</p>
-            <img class="img-responsive center-block confirm-checked-img" src="assets/images/covid-checkin/IndividualCheckIn-01.png" />
+            <img class="img-responsive center-block confirm-checked-img" src="assets/images/covid-checkin/IndividualCheckIn-01_webp.webp" />
             <p *ngIf="!isCaptain">Your captain has been notified.</p>
           </div>
         </div>
@@ -390,17 +331,17 @@
                       *ngIf="showRemoveIcon && member.role !== 'CAPTAIN'"
                       (click)="openDeleteRunnerModel(member)"
                     >
-                      <img src="assets/images/team-center/delete-runner.png" />
+                      <img src="assets/images/team-center/delete-runner_webp.webp" />
                     </div>
                     <h3>
                       <span class="ellipse_text"> {{ member.firstName }} {{ member.lastName }} </span>
-                      <img src="assets/images/team-center/captain-icon.png" *ngIf="member.role === 'CAPTAIN'" />
+                      <img src="assets/images/team-center/captain-icon_webp.webp" *ngIf="member.role === 'CAPTAIN'" />
                     </h3>
                   </div>
 
                   <div class="col-md-6 col-sm-6 col-6 right-col">
                     <div class="checked-in-image" *ngIf="member.onlineWebCheckInId">
-                      <img src="assets/images/team-center/right-icon.jpg" />
+                      <img src="assets/images/team-center/right-icon_webp.webp" />
                     </div>
 
                     <!-- IOS -->
@@ -681,7 +622,7 @@
                             : (show.expand_detail = volunteer.id)
                         "
                       >
-                        <img src="assets/images/team-center/arrow-down-icon.png" class="img-responsive" alt="arrow-down-icon" />
+                        <img src="assets/images/team-center/arrow-down-icon_webp.webp" class="img-responsive" alt="arrow-down-icon" />
                       </a>
                       <div
                         class="d-block d-lg-none view-other-details text-left"
@@ -756,12 +697,12 @@
                   <div class="col-md-6 col-sm-6 col-6 left-col">
                     <h3>
                       {{ member.firstName }} {{ member.lastName }}
-                      <img src="assets/images/team-center/captain-icon.png" *ngIf="member.role === 'CAPTAIN'" />
+                      <img src="assets/images/team-center/captain-icon_webp.webp" *ngIf="member.role === 'CAPTAIN'" />
                     </h3>
                   </div>
                   <div class="col-md-6 col-sm-6 col-6 right-col">
                     <div class="checked-in-image" *ngIf="member.onlineWebCheckInId">
-                      <img src="assets/images/team-center/right-icon.jpg" />
+                      <img src="assets/images/team-center/right-icon_webp.webp" />
                     </div>
                     <!-- IOS -->
                     <a
@@ -1016,7 +957,7 @@
         <div class="step4" id="step4" *ngIf="activeCaptainTab === 5">
           <div class="flow-holder">
             <div class="confirm-checked-in-holder">
-              <img class="img-responsive center-block" src="assets/images/covid-checkin/TeamCheckIn-01.png" />
+              <img class="img-responsive center-block" src="assets/images/covid-checkin/TeamCheckIn-01_webp.webp" />
               <h3>
                 <label>Confirmation Number:</label>
                 <label class="error">{{ checkedInConfirmationNumber }}</label>
