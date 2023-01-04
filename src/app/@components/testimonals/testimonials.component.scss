@@ -31,7 +31,7 @@
         }
       }
       &::before {
-        background-image: url(/assets/images/home/quote-left.svg);
+        background-image: url(/assets/images/home/quote-left_webp.webp);
         top: -30px;
         left: 15px;
         @media (max-width: $screen-xs-max) {
@@ -39,7 +39,7 @@
         }
       }
       &::after {
-        background-image: url(/assets/images/home/quote-right.svg);
+        background-image: url(/assets/images/home/quote-right_webp.webp);
         right: 15px;
         bottom: -30px;
         @media (max-width: $screen-xs-max) {
