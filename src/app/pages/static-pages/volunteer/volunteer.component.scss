@@ -2,12 +2,13 @@
 
 .volunteer_main {
   .volunteer_banner {
-    background: url(/assets/images/static-pages/volunteer/volunteer.jpg) no-repeat;
+    background: url(/assets/images/static-pages/volunteer/volunteer_webp.webp) no-repeat;
     background-size: cover;
     background-position: center;
     @include flexbox();
     @include justify-content(center);
     @include align-items(center);
+    @include font-weight(700);
     @include font-weight(700);
     color: $white;
     height: 350px;
