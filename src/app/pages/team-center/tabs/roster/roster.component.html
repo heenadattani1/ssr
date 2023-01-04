@@ -87,13 +87,13 @@
               *ngIf="rosterConfig.deleteRunner && isCaptain && runner.role !== 'CAPTAIN' && !selectedEvent.disableDelete"
               (click)="openDeleteRunnerModel(runner)"
             >
-              <img src="assets/images/team-center/delete-runner.png" class="delete-runner" alt="Delete Runner" />
+              <img src="assets/images/team-center/delete-runner_webp.webp" class="delete-runner" alt="Delete Runner" />
             </a>
             {{ runner.firstName + ' ' + runner.lastName }}
           </span>
           <img
             *ngIf="runner.role === 'CAPTAIN'"
-            src="assets/images/team-center/captain-icon.png"
+            src="assets/images/team-center/captain-icon_webp.webp"
             alt="Get Ready Icon"
             class="img-responsive captain-badge"
           />
@@ -106,7 +106,7 @@
               [ngClass]="{ 'icon-change': runner.expand_detail }"
               (click)="runner.expand_detail = !runner.expand_detail"
             >
-              <img src="assets/images/team-center/arrow-down-icon.png" class="img-responsive" alt="arrow-down-icon" />
+              <img src="assets/images/team-center/arrow-down-icon_webp.webp" class="img-responsive" alt="arrow-down-icon" />
             </a>
           </span>
         </div>
@@ -162,7 +162,7 @@
             *ngIf="rosterConfig.deleteRunner && !selectedEvent.disableInvite"
             (click)="deleteRunnerInvite(inviteinfo)"
           >
-            <img src="assets/images/team-center/delete-runner.png" class="delete-runner" alt="Delete Runner" />
+            <img src="assets/images/team-center/delete-runner_webp.webp" class="delete-runner" alt="Delete Runner" />
           </a>
           <span class="email-invite">{{ inviteinfo.email }}</span>
         </div>
