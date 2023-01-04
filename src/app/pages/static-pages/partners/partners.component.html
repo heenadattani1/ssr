@@ -15,7 +15,8 @@
             <div class="slide-wrapper">
               <div ngxSlickItem *ngFor="let chunk of chunks" class="chunk">
                 <div class="img" (click)="goToDetails(chunk.slug)">
-                  <img [attr.src]="chunk.logo" alt="Partner" />
+                  <img [attr.src]="chunk.logo" alt="Partner"/>
+                  <!-- <img [attr.src]="chunk.logo" alt="Partner" height="100" width="100" class="setWidth"/> -->
                 </div>
               </div>
             </div>
