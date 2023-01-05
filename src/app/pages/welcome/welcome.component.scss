@@ -244,7 +244,7 @@
   }
 
   .texture-bg {
-    background-image: url(/assets/images/landing-page/overlay.png);
+    background-image: url(/assets/images/landing-page/overlay.webp);
     padding: 210px 0 0;
     background-repeat: no-repeat;
     background-size: cover;
@@ -356,7 +356,7 @@
       &::before {
         background-size: cover;
         background-repeat: repeat-x;
-        background-image: url(/assets/images/landing-page/ragnar-bg.png);
+        background-image: url(/assets/images/landing-page/ragnar-bg.webp);
         content: '';
         position: absolute;
         height: 100%;
@@ -526,7 +526,7 @@
             left: 0;
 
             &::before {
-              background-image: url(/assets/images/landing-page/ragnar01.png);
+              background-image: url(/assets/images/landing-page/ragnar01.webp);
             }
 
             @media (max-width: 991px) {
@@ -547,7 +547,7 @@
             left: 240px;
 
             &::before {
-              background-image: url(/assets/images/landing-page/ragnar02.png);
+              background-image: url(/assets/images/landing-page/ragnar02.webp);
             }
 
             @media (max-width: 1500px) {
@@ -564,7 +564,7 @@
               left: auto;
 
               &::before {
-                background-image: url(/assets/images/landing-page/ragnar03.png);
+                background-image: url(/assets/images/landing-page/ragnar03.webp);
                 transform: rotateZ(90deg);
               }
             }
@@ -576,7 +576,7 @@
 
             @media (max-width: $screen-xxs-max) {
               &::before {
-                background-image: url(/assets/images/landing-page/ragnar06.png);
+                background-image: url(/assets/images/landing-page/ragnar06.webp);
                 transform: rotate(-45deg);
               }
             }
@@ -588,7 +588,7 @@
             margin: 0 auto;
 
             &::before {
-              background-image: url(/assets/images/landing-page/ragnar03.png);
+              background-image: url(/assets/images/landing-page/ragnar03.webp);
             }
 
             @media (max-width: 991px) {
@@ -596,7 +596,7 @@
               right: 0;
 
               &::before {
-                background-image: url(/assets/images/landing-page/ragnar06.png);
+                background-image: url(/assets/images/landing-page/ragnar06.webp);
               }
             }
 
@@ -617,7 +617,7 @@
             right: 233px;
 
             &::before {
-              background-image: url(/assets/images/landing-page/ragnar04.png);
+              background-image: url(/assets/images/landing-page/ragnar04.webp);
             }
 
             @media (max-width: 1500px) {
@@ -646,7 +646,7 @@
 
             @media (max-width: $screen-xxs-max) {
               &::before {
-                background-image: url(/assets/images/landing-page/ragnar06.png);
+                background-image: url(/assets/images/landing-page/ragnar06.webp);
                 transform: rotate(-45deg);
               }
             }
@@ -656,7 +656,7 @@
             right: -0.7vw;
 
             &::before {
-              background-image: url(/assets/images/landing-page/ragnar05.png);
+              background-image: url(/assets/images/landing-page/ragnar05.webp);
             }
 
             @media (max-width: 991px) {

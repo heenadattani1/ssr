@@ -150,7 +150,7 @@ export const activities = [
     name: 'Strength Train',
   },
   {
-    src: 'assets/images/virtual-challenge/activity-icon/sup_standup_paddle_board.png',
+    src: 'assets/images/virtual-challenge/activity-icon/sup_standup_paddle_board_webp.webp',
     alt: 'Sup Standup Paddle Board',
     name: 'Sup Standup Paddle Board',
   },

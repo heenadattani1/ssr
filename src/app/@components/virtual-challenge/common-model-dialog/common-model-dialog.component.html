@@ -74,71 +74,6 @@
   </div>
 </div>
 
-<!-- PROGRESS BAR EDITION -->
-
-<!-- <div
-  class="modal-body"
-  *ngIf="show.modal.challengeProgress && addMileProgress && addMileProgress.teamDetail && addMileProgress.existingMember"
->
-  <div
-    class="progress_cover"
-    [ngClass]="
-      addMileProgress.progressDetails.safeState === 'NOT'
-        ? 'not-safe'
-        : addMileProgress.progressDetails.safeState === 'MAYBE'
-        ? 'maybe-safe'
-        : 'likely-safe'
-    "
-  >
-    <span
-      class="sticky_value"
-      [ngStyle]="{
-        left:
-          addMileProgress.teamDetail.achieved_run === 0
-            ? '2%'
-            : (addMileProgress.teamDetail.achieved_run * 100) / addMileProgress.teamDetail.total_run <= 5
-            ? '5%'
-            : (addMileProgress.teamDetail.achieved_run * 100) / addMileProgress.teamDetail.total_run <= 100
-            ? (addMileProgress.teamDetail.achieved_run * 100) / addMileProgress.teamDetail.total_run + '%'
-            : '95%'
-      }"
-    >
-      {{ addMileProgress.teamDetail.achieved_run }}
-      {{ addMileProgress.challengeDetail.unitType === 'DISTANCE' ? 'mi' : 'ft' }}
-    </span>
-    <ngb-progressbar
-      type="primary"
-      [value]="
-        addMileProgress.teamDetail.achieved_run === 0
-          ? 1
-          : (addMileProgress.teamDetail.achieved_run * 100) / addMileProgress.teamDetail.total_run <= 5
-          ? 5
-          : (addMileProgress.teamDetail.achieved_run * 100) / addMileProgress.teamDetail.total_run <= 100
-          ? (addMileProgress.teamDetail.achieved_run * 100) / addMileProgress.teamDetail.total_run
-          : 100
-      "
-    ></ngb-progressbar>
-    <div class="d-flex justify-content-between">
-      <span class="val_1">0 {{ addMileProgress.challengeDetail.unitType === 'DISTANCE' ? 'mi' : 'ft' }}</span>
-      <span class="val_3"
-        >{{ addMileProgress.teamDetail.total_run }} {{ addMileProgress.challengeDetail.unitType === 'DISTANCE' ? 'mi' : 'ft' }}</span
-      >
-    </div>
-  </div>
-  <div class="modal-footer">
-    <button class="rg_btn" (click)="closeModal(false)">{{ 'components.virtual-challenge.common-model.ok' | translate }}</button>
-    <button
-      class="rg_btn rg_bbtn"
-      *ngIf="addMileProgress.addedActivity && addMileProgress.addedActivity.unit > 25"
-      (click)="closeModal('edit')"
-    >
-      {{ 'components.virtual-challenge.common-model.edit-mileage' | translate }}
-    </button>
-  </div>
-</div> -->
-
-<!-- SHOW FAQ QUESTIONS -->
-
 <div class="modal-body" *ngIf="show.modal.faq">
   <div *ngFor="let faq of componentData.faqs">
     <h4 class="mb-1">{{ faq.title }}</h4>
@@ -225,7 +160,6 @@
   <div class="modal-body">
     <div class="invite_row" *ngFor="let invites of addMileProgress.inviteDetails">
       <div class="img_col">
-        <!-- <img src="assets/images/virtual-challenge/avtar1.png" alt="Avtar"> -->
         <p class="mb-2 d-inline-block w-100">
           <span *ngIf="invites.challenge.challengeType !== 'BRAND' && invites.challenge.challengeType !== 'COMMUNITY'"
             >Invited to achieve {{ invites.challenge.unitValue }} {{ invites.challenge.unitType === 'DISTANCE' ? 'Miles' : 'Elevation' }} in

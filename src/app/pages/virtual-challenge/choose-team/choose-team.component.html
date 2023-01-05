@@ -30,7 +30,7 @@
                       aria-hidden="true"
                     ></span>
                     <div *ngFor="let runner of teamRunners" class="teammates-box" [ngClass]="{ disable: runner.alreadyJoined }">
-                      <img src="{{ runner.profilePhoto || '/assets/images/user-profile-pic.png' }}" />
+                      <img src="{{ runner.profilePhoto || '/assets/images/user-profile-pic_webp.webp' }}" />
                       <div class="teammate-name">{{ runner.firstName }} {{ runner.lastName }}</div>
                     </div>
                   </div>

@@ -5,7 +5,7 @@
         <ngb-toast *ngIf="show.toast" [delay]="5000" [autohide]="false" (hide)="(!show.toast)" class="toast_dashboard">
           <div class="toast_style">
             <i class="iconm-X" (click)="show.toast = !show.toast"></i>
-            <img src="assets/images/virtual-challenge/tost.png" alt="Toast" />
+            <img src="assets/images/virtual-challenge/tost_webp.webp" alt="Toast" />
             <p>
               <strong>{{ 'virtual-challenge.dashboard.massage1' | translate }}</strong>
               {{ 'virtual-challenge.dashboard.massage2' | translate }}
@@ -14,7 +14,7 @@
         </ngb-toast>
         <div class="side_bar">
           <div class="profile_img">
-            <img src="assets/images/virtual-challenge/profile-demo.png" alt="Profile Picture" />
+            <img src="assets/images/virtual-challenge/profile-demo_webp.webp" alt="Profile Picture" />
           </div>
           <div class="sidebar_wrpeer">
             <h1>{{ 'virtual-challenge.archived-dashboard.cape-cod' | translate }}</h1>
@@ -46,16 +46,7 @@
               <p>—</p>
               <p>{{ 'virtual-challenge.archived-dashboard.challenge-begins-june' | translate }}</p>
             </div>
-            <!-- <div class="team_wrapper d-none d-md-block">
-                            <ul>
-                                <li><img src="assets/images/virtual-challenge/avtar1.png" alt="Avatar"></li>
-                                <li><img src="assets/images/virtual-challenge/avtar2.png" alt="Avatar"></li>
-                                <li><img src="assets/images/virtual-challenge/avtar3.png" alt="Avatar"></li>
-                                <li><img src="assets/images/virtual-challenge/avtar4.png" alt="Avatar"></li>
-                                <li>aA</li>
-                                <li class="more_mambers">6+</li>
-                            </ul>
-                        </div> -->
+           
             <div class="buttuns d-none d-md-block">
               <a (click)="onDashboardScreenSelect('addRun')"
                 ><i class="iconm-addrun"></i>{{ 'virtual-challenge.archived-dashboard.add-run' | translate }}</a

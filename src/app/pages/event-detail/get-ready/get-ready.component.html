@@ -128,29 +128,6 @@
             <img src="assets/images/event-detail/get-ready/race-bible-icon_webp.webp" alt="Race Bible" class="img-responsive center-block" />
             <p class="get_ready_menu_title">{{ 'common-data.race-bible' | translate }}</p>
           </a>
-          <!-- Removing below code as it's for internation races -->
-          <!-- <a
-          *ngIf="!isObject(getReadyData.files.race_bible) && getReadyData.id === '98'"
-          href="{{
-            getReadyData.files.race_bible
-              ? getReadyData.files.race_bible
-              : 'https://images.runragnar.com/files/race_documents/02%20-%20Race%20Bible.pdf'
-          }}"
-          target="_blank"
-          class="menu_nav_toggle"
-        >
-          <img src="assets/images/event-detail/get-ready/race-bible-icon.png" alt="Race Bible" class="img-responsive center-block" />
-          <p class="get_ready_menu_title">{{ 'common-data.race-bible' | translate }}</p>
-        </a>
-        <a
-          *ngIf="isObject(getReadyData.files.race_bible) && getReadyData.id === '98'"
-          href="{{ getReadyData.files.race_bible }}"
-          target="_blank"
-          class="menu_nav_toggle"
-        >
-          <img src="assets/images/event-detail/get-ready/race-bible-icon.png" alt="Race Bible" class="img-responsive center-block" />
-          <p class="get_ready_menu_title">{{ 'common-data.race-bible' | translate }}</p>
-        </a> -->
           <a
             *ngIf="getReadyData.type === 'trail'"
             href="{{
