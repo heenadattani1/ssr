@@ -3,6 +3,9 @@
 @mixin container-common() {
   max-width: 1170px;
 }
+.setWidth {
+  width: auto;
+}
 .what_is_Raganr_main {
   .what-is-ragnar-banner {
     background: url(/assets/images/static-pages/whatis-ragnar/what-is-ragnar-banner-webp.webp) no-repeat;
