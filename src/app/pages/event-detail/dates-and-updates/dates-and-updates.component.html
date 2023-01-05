@@ -175,13 +175,6 @@
                 </div>
                 <div class="race_date_info">
                   <span [innerHtml]="allUpdates.content | sanitizeHtml" *ngIf="allUpdates.content !== ''"></span>
-
-                  <!-- <div class="race-dates-video race-updates-img" *ngIf="allUpdates?.video_url?.length > 0">
-                    <a data-lity href="{{allUpdates.video_url}}" title="Play Video">
-                      <img src="assets/images/relay-events/video-play-icon.png" alt="Play Video Thumb" />
-                    </a>
-                  </div> -->
-
                   <div class="race-updates-img" *ngIf="allUpdates?.image?.length > 0">
                     <img
                       *ngIf="(allUpdates.image | fileNameAndType) === null"

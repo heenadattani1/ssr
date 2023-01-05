@@ -178,12 +178,10 @@
               line-height: 22px;
               font-weight: 400;
               background: #fff;
-              background: url(/assets/images/virtual-challenge/check_fill.png);
+              background: url(/assets/images/virtual-challenge/check_fill_webp.webp);
               background-size: cover;
               border: 0;
               @media (max-width: $screen-xs-max) {
-                // background: url(../../../images/challenge/checkmarked.png);
-                // background-size: cover;
               }
             }
             .radio-custom + .radio-custom-label:before {

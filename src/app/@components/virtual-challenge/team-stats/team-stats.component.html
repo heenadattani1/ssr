@@ -8,17 +8,17 @@
     <li class="member-wrapper" *ngFor="let member of teamMemberDetail.slice(0, show.allChallengeTeamMembers)">
       <div class="detail-col">
         <span class="img-col">
-          <img [src]="member.profilePhoto || 'assets/images/user-profile-pic.png'" alt="User Profile" />
+          <img [src]="member.profilePhoto || 'assets/images/user-profile-pic_webp.webp'" alt="User Profile" />
           <img
             *ngIf="existingMember.role === 'CAPTAIN' && removebtnFlag && member.removable"
-            src="/assets/images/team-center/delete-runner.png"
+            src="/assets/images/team-center/delete-runner_webp.webp"
             alt="delete"
             class="delete_icon"
             (click)="deleteMember(member)"
           />
           <img
             *ngIf="existingMember.role !== 'CAPTAIN' && removebtnFlag && member.profileId === existingMember.profileId"
-            src="/assets/images/team-center/delete-runner.png"
+            src="/assets/images/team-center/delete-runner_webp.webp"
             alt="delete"
             class="delete_icon"
             (click)="deleteMember(member)"

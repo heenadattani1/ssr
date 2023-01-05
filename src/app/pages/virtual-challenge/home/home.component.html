@@ -4,7 +4,7 @@
 <div class="virtual_page" *ngIf="!loading">
   <div class="toast_style" *ngIf="virtualChallengeNotifications && virtualChallengeNotifications.totalUnRead">
     <div class="img_col">
-      <img src="assets/images/virtual-challenge/tost2.png" alt="" />
+      <img src="assets/images/virtual-challenge/tost2_webp.webp" alt="" />
       <p>
         <strong>{{ virtualChallengeNotifications.totalUnRead }} {{ 'virtual-challenge.home.pending-challenge' | translate }}</strong>
         {{ 'virtual-challenge.home.race-sunset' | translate }}
@@ -15,7 +15,6 @@
 
   <div class="toast_style" *ngIf="inviteDetails && inviteDetails.length">
     <div class="img_col">
-      <!-- <img src="assets/images/virtual-challenge/tost2.png" alt="" /> -->
       <img height="40" width="40" [src]="inviteDetails[0].challenge.contents.HOME.logoImage" alt="" />
       <p>
         <strong>{{ 'virtual-challenge.home.pending-challenge' | translate }}</strong>

@@ -676,7 +676,7 @@ body.overflow-hidden {
 
         .edite_btn {
           display: inline;
-          background: url('/assets/images/team-center/pencil.png') no-repeat;
+          background: url('/assets/images/team-center/pencil_webp.webp') no-repeat;
           width: 14px;
           height: 13px;
           border: 0;
@@ -1203,7 +1203,6 @@ body.overflow-hidden {
         width: 16px;
         height: 16px;
         display: inline-block;
-        // background: url('../images/challenge/close.png');
         color: #fff;
         font-size: 20px;
         font-weight: 500;
@@ -1214,15 +1213,6 @@ body.overflow-hidden {
           top: 95px;
           left: 15px;
         }
-
-        /* &:after{
-					content: "";
-					width: 16px;
-					height: 16px;
-					background: url('images/challenge/close.png');
-					z-index: 1;
-					position: absolute;
-				} */
       }
 
       .challange-result-title {

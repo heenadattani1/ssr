@@ -72,7 +72,7 @@
               *ngIf="volunteerConfig.deleteVolunteer && !selectedEvent.disableVolunteer && isCaptain"
               (click)="openDeleteVolunteerModel(volunteer)"
             >
-              <img src="assets/images/team-center/delete-runner.png" class="delete-runner" alt="Delete Runner" />
+              <img src="assets/images/team-center/delete-runner_webp.webp" class="delete-runner" alt="Delete Runner" />
             </a>
             {{ volunteer.firstName + ' ' + volunteer.lastName }}
           </span>
@@ -85,7 +85,7 @@
               [ngClass]="{ 'icon-change': volunteer.expand_detail }"
               (click)="volunteer.expand_detail = !volunteer.expand_detail"
             >
-              <img src="assets/images/team-center/arrow-down-icon.png" class="img-responsive" alt="arrow-down-icon" />
+              <img src="assets/images/team-center/arrow-down-icon_webp.webp" class="img-responsive" alt="arrow-down-icon" />
             </a>
             <div
               class="d-block d-lg-none view-other-details text-left"
@@ -158,7 +158,7 @@
             *ngIf="volunteerConfig.deleteVolunteer && !selectedEvent.disableInvite"
             (click)="deleteRunnerInvite(inviteinfo)"
           >
-            <img src="assets/images/team-center/delete-runner.png" class="delete-runner" alt="Delete Volunteer" />
+            <img src="assets/images/team-center/delete-runner_webp.webp" class="delete-runner" alt="Delete Volunteer" />
           </a>
           <span class="email-invite">{{ inviteinfo.email }}</span>
         </div>

@@ -451,7 +451,7 @@ export class TeamCenterComponent implements OnInit, OnDestroy {
             this.information.invite = res.getInvitedUsers;
             if (res.getUsersProfileImage) {
               res.getUsersProfileImage.forEach((data) => {
-                this.profileImages[data.id] = data.profilePhoto ? data.profilePhoto : 'assets/images/user-profile-pic.png';
+                this.profileImages[data.id] = data.profilePhoto ? data.profilePhoto : 'assets/images/user-profile-pic_webp.webp';
               });
             }
           },

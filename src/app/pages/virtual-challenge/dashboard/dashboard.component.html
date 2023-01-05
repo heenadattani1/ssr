@@ -16,7 +16,7 @@
         <ngb-toast *ngIf="show.toast" [delay]="5000" [autohide]="false" (hide)="(!show.toast)" class="toast_dashboard">
           <div class="toast_style">
             <i class="iconm-X" (click)="show.toast = !show.toast"></i>
-            <img src="assets/images/virtual-challenge/tost.png" alt="Toast" />
+            <img src="assets/images/virtual-challenge/tost_webp.webp" alt="Toast" />
             <p>
               <strong>{{ 'virtual-challenge.dashboard.massage1' | translate }}</strong>
               {{ 'virtual-challenge.dashboard.massage2' | translate }}
@@ -182,7 +182,7 @@
                 <img
                   (click)="deleteMember(member)"
                   *ngIf="existingMember.role === 'CAPTAIN' || member.profileId === userData.id"
-                  src="/assets/images/team-center/delete-runner.png"
+                  src="/assets/images/team-center/delete-runner_webp.webp"
                   alt="delete"
                   class="delete_icon"
                 />
